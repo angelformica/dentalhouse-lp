@@ -5,7 +5,7 @@ import './index.css'
 // Bilingual (EN/ES) with a simple language toggle, Tailwind styling
 // CTA routes to WhatsApp and phone; adjust images/links as needed.
 
-const WHATSAPP_NUMBER_INTL = "528717435798"; // +52 871 743 5798 (Mexico)
+const WHATSAPP_NUMBER_INTL = "529843148333"; // +52 871 743 5798 (Mexico)
 const WHATSAPP_TEXT_EN = encodeURIComponent(
   "Hi! I'd like to book my FREE consultation at Dental House Playa."
 );
@@ -100,7 +100,7 @@ export default function DentalHouseLanding() {
           '@context': 'https://schema.org',
           '@type': 'Dentist',
           name: 'Dental House Playa',
-          telephone: '+52 871 743 5798',
+          telephone: '+52 984 314 8333',
           address: {
             '@type': 'PostalAddress',
             streetAddress: 'Ave. 10 entre calles 38 y 40',
@@ -159,10 +159,16 @@ export default function DentalHouseLanding() {
             <div className="aspect-[4/3] w-full rounded-3xl shadow-xl overflow-hidden bg-gradient-to-br from-cyan-50 to-sky-100 grid place-items-center">
               {/* Replace the placeholder image with a clinic or smile photo if desired */}
               <img
-                src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80"
-                alt={lang === "en" ? "Modern dental clinic" : "Clínica dental moderna"}
-                className="w-full h-full object-cover"
-              />
+                sizes="(max-width: 1400px) 100vw, 1400px"
+                srcSet="
+patient-dentist_evd9fi_c_scale,w_200.jpg 200w,
+patient-dentist_evd9fi_c_scale,w_595.jpg 595w,
+patient-dentist_evd9fi_c_scale,w_873.jpg 873w,
+patient-dentist_evd9fi_c_scale,w_1163.jpg 1163w,
+patient-dentist_evd9fi_c_scale,w_1329.jpg 1329w,
+patient-dentist_evd9fi_c_scale,w_1400.jpg 1400w"
+                src="patient-dentist_evd9fi_c_scale,w_1400.jpg"
+                alt={lang === "en" ? "Modern dental clinic" : "Clínica dental moderna"} className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -198,10 +204,18 @@ export default function DentalHouseLanding() {
           </div>
           <div className="rounded-3xl overflow-hidden shadow-sm border border-slate-200">
             <img
-              src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80"
+              sizes="(max-width: 1400px) 100vw, 1400px"
+              srcSet="
+concept-interior-new-modern-dental-clinic-office-dental-equipment_z0qo1d_c_scale,w_200.jpg 200w,
+concept-interior-new-modern-dental-clinic-office-dental-equipment_z0qo1d_c_scale,w_525.jpg 525w,
+concept-interior-new-modern-dental-clinic-office-dental-equipment_z0qo1d_c_scale,w_759.jpg 759w,
+concept-interior-new-modern-dental-clinic-office-dental-equipment_z0qo1d_c_scale,w_950.jpg 950w,
+concept-interior-new-modern-dental-clinic-office-dental-equipment_z0qo1d_c_scale,w_1129.jpg 1129w,
+concept-interior-new-modern-dental-clinic-office-dental-equipment_z0qo1d_c_scale,w_1366.jpg 1366w,
+concept-interior-new-modern-dental-clinic-office-dental-equipment_z0qo1d_c_scale,w_1400.jpg 1400w"
+              src="concept-interior-new-modern-dental-clinic-office-dental-equipment_z0qo1d_c_scale,w_1400.jpg"
               alt={lang === "en" ? "Modern dental clinic" : "Clínica dental moderna"}
-              className="w-full h-full object-cover"
-            />
+              className="w-full h-full object-cover" />
           </div>
         </div>
       </section>
